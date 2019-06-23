@@ -1,4 +1,6 @@
 package projeto.estacionamento.telas;
 
-public class TelaEntradaVeiculo {
+import javax.swing.*;
+
+public class TelaEntradaVeiculo extends JFrame {
 }

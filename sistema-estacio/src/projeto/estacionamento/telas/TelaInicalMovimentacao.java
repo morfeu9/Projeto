@@ -1,4 +1,6 @@
 package projeto.estacionamento.telas;
 
-public class TelaInicalMovimentacao {
+import javax.swing.*;
+
+public class TelaInicalMovimentacao extends JFrame {
 }

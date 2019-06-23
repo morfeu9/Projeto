@@ -1,4 +1,6 @@
 package projeto.estacionamento.telas;
 
-public class TelaInicialRelatorio {
+import javax.swing.*;
+
+public class TelaInicialRelatorio extends JFrame {
 }
