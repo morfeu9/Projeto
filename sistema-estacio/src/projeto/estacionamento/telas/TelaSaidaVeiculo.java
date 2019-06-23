@@ -1,4 +1,12 @@
 package projeto.estacionamento.telas;
 
-public class TelaSaidaVeiculo {
+import javax.swing.*;
+
+public class TelaSaidaVeiculo extends JFrame {
+
+    private JFrame parent;
+
+    public TelaSaidaVeiculo(JFrame parent) {
+        this.parent = parent;
+    }
 }
