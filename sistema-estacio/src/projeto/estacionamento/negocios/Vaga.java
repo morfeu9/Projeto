@@ -16,7 +16,7 @@ public class Vaga {
      * Verificar se ha alguma vaga livre
      * @return true se tiver vaga ou false se não
      */
-    public boolean vagaLivre(){
+    public static boolean vagaLivre(){
         //TODO  implementar
         return false;
     }

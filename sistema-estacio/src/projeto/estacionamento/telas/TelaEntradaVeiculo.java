@@ -1,6 +1,8 @@
 package projeto.estacionamento.telas;
 
 import projeto.estacionamento.controller.EstacionamentoControl;
+import projeto.estacionamento.controller.EstacionamentoException;
+import projeto.estacionamento.controller.VeiculoException;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -94,7 +96,16 @@ public class TelaEntradaVeiculo extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent acao) {
         if (acao.getActionCommand().equals("Continuar")){
             EstacionamentoControl control = new EstacionamentoControl();
-            control.processarEntrada(txfPlaca.getText(), txtMarca.getText(), txtModelo.getText(), txtCor.getText());
+            try {
+                control.processarEntrada(txfPlaca.getText(), txtMarca.getText(), txtModelo.getText(), txtCor.getText());
+
+                JOptionPane.showMessageDialog(null, "Veiculo registrado com sucesso"
+                                                ,"Entrada de veiculo", JOptionPane.INFORMATION_MESSAGE);
+
+            } catch (EstacionamentoException | VeiculoException e) {
+                JOptionPane.showMessageDialog(null, e.getMessage(), "Falha na entrada",
+                                                JOptionPane.ERROR_MESSAGE);
+            }
 
         }
         this.parent.setVisible(true);
